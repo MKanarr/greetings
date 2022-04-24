@@ -37,6 +37,8 @@ function clipboardCopy(item) {
         if (!text || text.trim().length == 0) throw new Error('No text to copy - missing following field(s): driver and/or guest info');
 
         navigator.clipboard.writeText(text);
+
+        alert('Copied message!');
     }
     catch(e) {
         alert(e);
