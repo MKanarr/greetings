@@ -1,0 +1,20 @@
+.message {
+    padding: 5px;
+    height: 15vh;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+}
+
+.form-check-input:checked {
+    background-color: #e51636 !important;
+    border-color: #e51636 !important;
+}
+
+.btn {
+    background-color: #e51636 !important;
+    border-color:#e51636 !important;
+}
+
+@media screen and (max-width: 660px) {
+    
+}
