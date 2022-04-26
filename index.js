@@ -1,7 +1,7 @@
 function getInfo() {
     try {
-        const driver_name = document.getElementById('inputDriver').value;
-        const guest_name = document.getElementById('inputGuest').value;
+        const driver_name = document.getElementById('inputDriver').value.trim();
+        const guest_name = document.getElementById('inputGuest').value.trim();
         const radio = document.getElementsByName('store');
         let store_name = '';
 
@@ -30,9 +30,6 @@ function getInfo() {
 function clipboardCopy(item) {
     try {
         let text = document.getElementById(item).textContent;
-
-        console.log(text);
-        console.log(text.length);
 
         if (!text || text.trim().length == 0) throw new Error('No text to copy - missing following field(s): driver and/or guest info');
 
