@@ -1,7 +1,7 @@
 function getInfo() {
     try {
-        const driver_name = document.getElementById('inputDriver').value;
-        const guest_name = document.getElementById('inputGuest').value;
+        const driver_name = document.getElementById('inputDriver').value.trim();
+        const guest_name = document.getElementById('inputGuest').value.trim();
         const radio = document.getElementsByName('store');
         const late = document.getElementById('flexSwitchCheckDefault').checked;
         let store_name = '';
@@ -42,20 +42,13 @@ function clipboardCopy(item) {
     try {
         let text = document.getElementById(item).textContent;
 
-        console.log(text);
-        console.log(text.length);
-
         if (!text || text.trim().length == 0) throw new Error('No text to copy - missing following field(s): driver and/or guest info');
 
         navigator.clipboard.writeText(text);
+
+        alert('Copied message!');
     }
     catch(e) {
         alert(e);
     }
 }
-
-
-var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
-var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-  return new bootstrap.Popover(popoverTriggerEl)
-});
