@@ -3,6 +3,7 @@
     height: 15vh;
     border-radius: 5px;
     border: 1px solid #ced4da;
+    overflow: scroll;
 }
 
 .form-check-input:checked {
@@ -23,5 +24,10 @@
 @media screen and (max-width: 770px) {
     .holder {
         text-align: center;
+    }
+
+    .message {
+        height: 20vh;
+        overflow: scroll;
     }
 }
